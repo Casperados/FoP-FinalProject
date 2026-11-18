@@ -1,9 +1,12 @@
 // Background - variable "backgroundImage"
 let backgroundImage;
+// import Character from "./character.js";
 
 function preload() {
   backgroundImage = loadImage("assets/game_background.jpg");
 }
+
+// const Character = new Character(180, 615); // Create a new character instance
 
 // Game
 function setup() {
