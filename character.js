@@ -10,22 +10,27 @@ export default class Character {
     // Spikes
     stroke(0);
     for (let a = 0; a < TWO_PI; a += 0.18) {
-      line(x + 80, y + 15, x + 80 + cos(a) * 17, y + 15 + sin(a) * 17);
+      line(
+        this.x + 80,
+        this.y + 15,
+        this.x + 80 + cos(a) * 17,
+        this.y + 15 + sin(a) * 17,
+      );
     }
 
     //Character
     fill(0);
     noStroke();
-    circle(x + 80, y + 15, 30);
+    circle(this.x + 80, this.y + 15, 30);
 
-    // Eyes
+    // Ethis.yes
     fill(255);
-    circle(x + 76, y + 15, 5); //Eye-left
-    circle(x + 84, y + 15, 5); //Eye-right
+    circle(this.x + 76, this.y + 15, 5); //Ethis.ye-left
+    circle(this.x + 84, this.y + 15, 5); //Ethis.ye-right
 
     fill(0);
-    circle(x + 83, y + 15, 2); //Eye-right-pupil
-    circle(x + 77, y + 15, 2); //Eye-left-pupil
+    circle(this.x + 83, this.y + 15, 2); //Ethis.ye-right-pupil
+    circle(this.x + 77, this.y + 15, 2); //Ethis.ye-left-pupil
 
     // Legs
     stroke(0);
@@ -34,24 +39,24 @@ export default class Character {
 
     //Left
     beginShape();
-    vertex(x + 74, y + 28); // Begin
-    vertex(x + 70, y + 34); // Knee
-    vertex(x + 74, y + 40); // End
+    vertex(this.x + 74, this.y + 28); // Begin
+    vertex(this.x + 70, this.y + 34); // Knee
+    vertex(this.x + 74, this.y + 40); // End
     endShape();
 
     //Right
     beginShape();
-    vertex(x + 86, y + 28); // Begin
-    vertex(x + 90, y + 34); // Knee
-    vertex(x + 86, y + 40); // End
+    vertex(this.x + 86, this.y + 28); // Begin
+    vertex(this.x + 90, this.y + 34); // Knee
+    vertex(this.x + 86, this.y + 40); // End
     endShape();
   } // Is this supposed to be our character?
 
   jump() {
-    this.y -= 20; // Move character up by 20 pixels
+    this.y -= 20; // Move character up bthis.y 20 pithis.xels
   }
 
   fall() {
-    this.y += 20; // Move character down by 20 pixels
+    this.y += 20; // Move character down bthis.y 20 pithis.xels
   }
 }

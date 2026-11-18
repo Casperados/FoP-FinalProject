@@ -8,7 +8,7 @@ function preload() {
   backgroundImage = loadImage("assets/game_background.jpg");
 }
 
-const player = new Character(180, 615); // Create a new character instance
+const player = new Character(x, y); // Create a new character instance
 
 // Game
 function setup() {
