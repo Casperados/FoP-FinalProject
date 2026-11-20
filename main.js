@@ -3,6 +3,7 @@ let backgroundImage;
 let x = 100;
 let y = 600;
 import Character from "./character.js";
+import Button from "./button.js";
 
 // Overview of States available for Game
 const gameState = {
@@ -20,6 +21,7 @@ function preload() {
 }
 
 const player = new Character(x, y); // Create a new character instance
+const startButton = new Button(150, 150, 200, 100); // Create a new button instance - (x, y) klopt nog niet volgens mij
 
 // Game
 function setup() {
