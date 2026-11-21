@@ -21,7 +21,7 @@ function preload() {
 }
 
 const player = new Character(x, y); // Create a new character instance
-const startButton = new Button(150, 150, 200, 100); // Create a new button instance - (x, y) klopt nog niet volgens mij
+const startButton = new Button(105, 295, 150, 50); // Create a new button instance - (x, y) klopt nog niet volgens mij
 
 // Game
 function setup() {
@@ -36,6 +36,11 @@ function draw() {
   } else if (currentGameState === gameState.active) {
     player.draw();
   }
+}
 
-  player.draw();
+// This ONLY runs at the exact moment you click your mouse
+function mouseClicked() {
+  if (currentGameState === gameState.intro && startButton.mouseClicked()) {
+    currentGameState = gameState.active;
+  }
 }

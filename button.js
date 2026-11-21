@@ -1,5 +1,5 @@
 export default class Button {
-  constructor(x, y) {
+  constructor(x, y, width, height) {
     this.x = x;
     this.y = y;
     this.w = width; // Character width
@@ -15,6 +15,19 @@ export default class Button {
     strokeWeight(0);
     fill(255);
     textSize(20);
-    text("Click here", 205, 205);
+    textAlign(CENTER, CENTER); // Centers the text both horizontally and vertically
+    text("Click here", this.x + this.w / 2, this.y + this.h / 2);
+  }
+
+  mouseClicked() {
+    if (
+      mouseX > this.x &&
+      mouseX < this.x + this.w &&
+      mouseY > this.y &&
+      mouseY < this.y + this.h
+    ) {
+      return true;
+    }
+    return false;
   }
 }
