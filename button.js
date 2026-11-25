@@ -8,15 +8,18 @@ export default class Button {
 
   draw() {
     strokeWeight(0);
-    fill("#aec3b0");
-    rect(this.x, this.y, this.w, this.h);
+    fill("#f4f1de");
+    strokeWeight(2.5);
+    fill("#6b9080");
+    rect(this.x, this.y, this.w, this.h, 20);
 
     stroke(0);
     strokeWeight(0);
-    fill(255);
+    fill("#f4f1de");
+    textFont("Georgia");
     textSize(20);
     textAlign(CENTER, CENTER); // Centers the text both horizontally and vertically
-    text("Click here", this.x + this.w / 2, this.y + this.h / 2);
+    text("Start Game", this.x + this.w / 2, this.y + this.h / 2);
   }
 
   mouseClicked() {
